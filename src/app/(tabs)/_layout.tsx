@@ -1,9 +1,11 @@
 import { Tabs } from "expo-router";
 import { FontAwesome } from "@expo/vector-icons";
+import NotificationProvider from "../providers/NotificationProvider";
 
 const TabsLayout = () => {
   return (
-    <Tabs
+    <NotificationProvider>
+      <Tabs
       screenOptions={{ tabBarActiveTintColor: "black", tabBarShowLabel: false }}
     >
       <Tabs.Screen
@@ -36,6 +38,7 @@ const TabsLayout = () => {
         }}
       />
     </Tabs>
+    </NotificationProvider>
   );
 };
 
